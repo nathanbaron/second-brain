@@ -35,7 +35,7 @@ A person taking minutes says what they're unsure of in ordinary language, and so
 - **Title:** `<Vessel, place or person> — <action>`, matching his existing tasks.
 - **Body**, two short paragraphs:
   - **Background:** where and when it came up, who raised it, why it matters. "Raised by Tyrone at the 09:40 steering meeting; the spare pump is the only one on hand."
-  - **Suggested handling:** owner and how settled that is ("Owner: Nathan." / "Owner: likely Tyrone, to confirm." / "Owner not agreed."), any date actually said, and any follow-up date marked "suggested".
+  - **Suggested handling:** owner and how settled that is ("Owner: Nathan." / "Owner: likely Tyrone, to confirm." / "Owner not agreed."), the reason for the priority in a few words, any date actually said, and any follow-up date marked "suggested". Priority, people, and stated dates also go in the task's properties, not only in the text.
 
 ## By facet
 

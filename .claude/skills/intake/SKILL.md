@@ -52,12 +52,30 @@ Every note carries a **Source ID** (a hidden text property): `<meeting_id> <HH:M
 3. **Chunk.** Save the fetched text to the scratchpad and run `python3 -I .claude/skills/intake/chunk.py <file> <outdir> --minutes 30 [--after HH:MM]`. Chunks are about 14 KB, cut at speaker changes with a short overlap. Read every chunk; don't skim.
 4. **Split into conversations.** One note per real conversation, not per capture. A run of hallway exchanges on the same job is one conversation; a scheduled meeting is its own.
 5. **Names the source gets wrong.** Procurement's Kerry (comes through as "Carrie"). Matt on the repair team is Matthew Arlt. Scott for compressors is Scott Steenburgh. "Feeney" is Robert Feeney, the new FHI manager, not a vessel. Steve on the terminal works is Steve Consitt. DPA is the Designated Person Ashore, a regulatory role (Dean's). The FRONTENAC II is run by Loyalist Township, and Robert (Bob) Woodman is their marine services supervisor. Vessels: WI3 = WOLFE ISLANDER III, AI2 = AMHERST ISLANDER II, and GLENORA comes through as "Nora" or "Gonora". Add to this list when he corrects one.
-6. **Look up before linking.** Resolve people in the People roster or the Speaker Directory, and link only when sure. Speakers come through as numbers, so who said what is inference: name someone only when the content makes it certain.
+6. **Look up before linking.** Resolve every named person in the People roster or the Speaker Directory. Speakers come through as numbers, so who *said* something is inference; but when a name is plainly used ("send it to Tyrone", "Rob's ordering the sensors") and matches one roster entry, link it. Leave it unlinked only when the name is ambiguous (two Jasons, three Robs) or the person isn't in the roster, and then name them in the body.
 7. **Cross-check every commitment against Tasks.** See *The cross-check* below. Do this before writing a single task.
 8. **Find related notes.** Search Notes for each conversation's main subject (vessel, person, project, topic) within the same facet. Set `Related notes` to at most three older notes that are genuinely about the same thing. A wrong link is worse than none.
 9. **Write the notes** to the standard: title, 📝 icon, `AI summary`, `Source ID`, Areas, People, Vessel / Dock, Related notes; the body as the standard sets out.
-10. **Write the tasks.** Status **To Process**, always. Areas, People, Ships and Docks, Notes (the note), Related Tasks. Leave Priority and dates empty unless a date was actually said. Body to the standard: **Background**, **Suggested handling**.
+10. **Write the tasks**, with the properties filled, not just the body. See *Task properties* below. Status **To Process**, always. Body to the standard: **Background**, **Suggested handling**.
 11. **Report.** See below. Then stop. Don't triage for him.
+
+## Task properties
+
+He triages faster when the properties are already there. Fill them every time, as proposals he can change:
+
+- **Priority**, always set:
+  - **1 - Immediate**: safety, regulatory or class matters; anything affecting service; anything due in the next two working days.
+  - **2 - Important**: a date this week, a manager or regulator waiting on him, or something blocking someone else's work.
+  - **3 - Normal**: the default for real work with no pressure on it.
+  - **4 - Low**: ideas, nice-to-haves, "one day" items.
+  - **Purchasing**: when the action itself is ordering or buying something.
+  - Say in **Suggested handling** why, in a few words: "Priority 2: Jason wants it before Friday."
+- **People**: everyone named and resolved (see step 6), including the person he is waiting on.
+- **Ships and Docks**, **Areas**, **Projects**: link an existing open project when the task plainly belongs to it.
+- **Due Date**: when a deadline was said ("by Friday", "before the 4th", "ahead of the AGM"). Turn it into a real date from the conversation's date; if the phrase is vague ("end of the month"), use the last working day it implies and say so in the body.
+- **Do Date**: when he said when he would do it ("I'll call him tomorrow", "Monday morning").
+- **Follow-up date**: for things owed to him, when a date was said. If none was said, suggest one in the body only; don't set the property.
+- Never set a date that wasn't said or clearly implied. A missing date is better than a false one.
 
 ## The cross-check
 
