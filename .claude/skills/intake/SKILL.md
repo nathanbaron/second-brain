@@ -52,11 +52,30 @@ Every note carries a **Source ID** (a hidden text property): `<meeting_id> <HH:M
 3. **Chunk.** Save the fetched text to the scratchpad and run `python3 -I .claude/skills/intake/chunk.py <file> <outdir> --minutes 30 [--after HH:MM]`. Chunks are about 14 KB, cut at speaker changes with a short overlap. Read every chunk; don't skim.
 4. **Split into conversations.** One note per real conversation, not per capture. A run of hallway exchanges on the same job is one conversation; a scheduled meeting is its own.
 5. **Names the source gets wrong.** Procurement's Kerry (comes through as "Carrie"). Matt on the repair team is Matthew Arlt. Scott for compressors is Scott Steenburgh. "Feeney" is Robert Feeney, the new FHI manager, not a vessel. Steve on the terminal works is Steve Consitt. DPA is the Designated Person Ashore, a regulatory role (Dean's). The FRONTENAC II is run by Loyalist Township, and Robert (Bob) Woodman is their marine services supervisor. Vessels: WI3 = WOLFE ISLANDER III, AI2 = AMHERST ISLANDER II, and GLENORA comes through as "Nora" or "Gonora". Add to this list when he corrects one.
-6. **Look up before linking.** Query open Tasks for duplicates by keyword and vessel; link through `Related Tasks` instead of duplicating. Resolve people in the People roster or the Speaker Directory, and link only when sure. Speakers come through as numbers, so who said what is inference: name someone only when the content makes it certain.
-7. **Find related notes.** Search Notes for each conversation's main subject (vessel, person, project, topic) within the same facet. Set `Related notes` to at most three older notes that are genuinely about the same thing. A wrong link is worse than none.
-8. **Write the notes** to the standard: title, 📝 icon, `AI summary`, `Source ID`, Areas, People, Vessel / Dock, Related notes; the body as the standard sets out.
-9. **Write the tasks.** Status **To Process**, always. Areas, People, Ships and Docks, Notes (the note), Related Tasks. Leave Priority and dates empty unless a date was actually said. Body to the standard: **Background**, **Suggested handling**.
-10. **Report.** See below. Then stop. Don't triage for him.
+6. **Look up before linking.** Resolve people in the People roster or the Speaker Directory, and link only when sure. Speakers come through as numbers, so who said what is inference: name someone only when the content makes it certain.
+7. **Cross-check every commitment against Tasks.** See *The cross-check* below. Do this before writing a single task.
+8. **Find related notes.** Search Notes for each conversation's main subject (vessel, person, project, topic) within the same facet. Set `Related notes` to at most three older notes that are genuinely about the same thing. A wrong link is worse than none.
+9. **Write the notes** to the standard: title, 📝 icon, `AI summary`, `Source ID`, Areas, People, Vessel / Dock, Related notes; the body as the standard sets out.
+10. **Write the tasks.** Status **To Process**, always. Areas, People, Ships and Docks, Notes (the note), Related Tasks. Leave Priority and dates empty unless a date was actually said. Body to the standard: **Background**, **Suggested handling**.
+11. **Report.** See below. Then stop. Don't triage for him.
+
+## The cross-check
+
+Every commitment found in a conversation is checked against what is already in Tasks before anything is written, and every open task is checked against what was said. Nothing here changes a task's Status, dates, owner or priority: those are his.
+
+**Searching.** Look by vessel or place, person, and the key words of the action, in two passes: open tasks (any status except Completed and Not completed, To Process included), and tasks closed in the last 60 days. Use `notion-search` within the Tasks data source and SQL on `Name`. A match means the same action on the same thing, not just the same vessel.
+
+**When the commitment is already captured:**
+- **Open task:** do not create a new one. Append a dated line to the existing task's body, `Update, <D Mon>. <what was said, to the standard>`, and add the new note to its `Notes`. If a new date or owner was mentioned, put it in that line as "suggested"; leave the properties alone.
+- **Closed as Completed:** if it is the same piece of work, do not recreate it; list it in the report under *Already done*. If the problem has come back (a repair that failed again, a recurring request), create a new task, link the old one in `Related Tasks`, and say in **Background** "Recurring: earlier task closed <D Mon>."
+- **Closed as Not completed** (binned): do not recreate it unless it was raised again as a fresh commitment. Either way, name it in the report under *Raised again*.
+
+**When a conversation suggests an open task is finished** ("I sent that to Carl", "Rob's replaced the sensors", "that's sorted"):
+- Tick `Looks done` on that task and append `Update, <D Mon>. Appears complete: <the evidence, to the standard>.`
+- Never set Status to Completed. He confirms in the *Looks done* view on the Second Brain page and clears the box.
+- Only on plain evidence. "We should be close" is not done.
+
+**Within the run itself:** the same action raised in two conversations on the same day becomes one task, linked to both notes.
 
 ## Small and linked
 
@@ -80,8 +99,8 @@ Capture generously, because he reviews everything: his own commitments, things p
 
 This is the one place to speak plainly about method and confidence.
 
-- **On demand:** in chat. How many notes and tasks, with links. Anything time-sensitive. Anything kept out and why. Anything uncertain enough that he should check it.
-- **Nightly:** the run's final message, in the same order, ending with one line: `Intake <date>: <n> notes, <n> tasks, <n> kept out, <failures or none>.`
+- **On demand:** in chat. How many notes and tasks, with links. From the cross-check: how many commitments were already captured (and updated rather than duplicated), the *Looks done* list, *Already done*, *Raised again*, and any *Recurring*. Anything time-sensitive. Anything kept out and why. Anything uncertain enough that he should check it.
+- **Nightly:** the run's final message, in the same order, ending with one line: `Intake <date>: <n> notes, <n> new tasks, <n> updated, <n> looks done, <n> kept out, <failures or none>.`
 
 ## The count, for the briefing
 
