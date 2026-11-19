@@ -5,7 +5,8 @@ Every note and task this system writes reads as if a careful person who was in t
 ## Never in a note or task
 
 - How the material was gathered: no recording, transcript, audio, capture, TwinMind, Plaud, or "the recording shows".
-- Any tool or assistant: no Claude, AI, model, assistant, Elysia, "generated", "inferred", "extracted", "chunk", "summary of the transcript".
+- Any tool used to produce the note: no Claude, AI, model, "generated", "inferred", "extracted", "chunk", "summary of the transcript".
+- One exception, his word 19 Nov: Elysia may be named as a person doing work, like any team member, when a task is delegated to her or she is building something ("Owner: Nathan, with Elysia building it"; People: Elysia Virelle). She is never named as the source of a note.
 - Placeholder speakers: never "Speaker 2". If you don't know who said something, use their role ("the contractor", "the chief engineer") or write it without a speaker ("It was agreed that...", "A concern was raised about...").
 - Verbatim quotation as the default. Paraphrase. Quote a short phrase only when the exact words matter and you're sure who said them.
 - Filler a person wouldn't write: "In this conversation...", "The discussion covered a range of topics...".
