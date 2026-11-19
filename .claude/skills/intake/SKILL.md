@@ -105,6 +105,8 @@ His word, 16 Nov: the smaller the task, the more useful it is, and the value is 
 
 Capture generously, because he reviews everything: his own commitments, things promised to him (suggested Waiting On), ideas he voiced as wants, and items whose owner is unclear (said so). Skip anything already done during the conversation, and anything that only concerns other people.
 
+**A task needs a visible finish.** His rule, 19 Nov: if nobody will be able to see the outcome and close the task, it isn't a task. Someone else's action becomes a Waiting On task only when its result will come back to Nathan, or he needs it and will chase it; then give it a follow-up date. Otherwise it stays in the note's **Actions** line ("Vladimir is checking with Transport Canada whether the thruster must come out") and no task is made.
+
 ## What never goes in
 
 - Anything `standards/writing-notes.md` excludes.
