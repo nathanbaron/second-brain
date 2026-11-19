@@ -1,6 +1,6 @@
 ---
 name: intake
-description: Turn Nathan's captured conversations (TwinMind) into notes in the Notion Notes database candidate tasks in Tasks, status To Process, and proposed entries in the MES Activity Log, across every facet of his life. Runs nightly on a schedule, and on demand whenever he asks — "run intake", "process this morning", "process the meeting with X", "catch me up on today", "what's in TwinMind". On demand it can cover just part of the day, including a capture still in progress. Nothing is promoted without him.
+description: Turn Nathan's captured conversations (TwinMind) into notes in the Notion Notes database, candidate tasks in Tasks, status To Process, and proposed entries in the MES Activity Log, across every facet of his life. Runs nightly on a schedule, and on demand whenever he asks — "run intake", "process this morning", "process the meeting with X", "catch me up on today", "what's in TwinMind". On demand it can cover just part of the day, including a capture still in progress. Nothing is promoted without him.
 ---
 
 # Intake
