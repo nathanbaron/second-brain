@@ -14,7 +14,7 @@ The working instructions for Nathan Baron's second brain. The knowledge itself l
 - Nothing becomes real without him. Tasks land as To Process, and he triages.
 - Every word written to Notion follows `standards/writing-notes.md`.
 - Facets keep their own rules, and nothing from one facet is pulled into another's output unless he asks.
-- Never write to the MES Activity Log or the calendar. Flag candidates instead.
+- Never write to the calendar; flag candidates instead. The MES Activity Log takes only proposed entries and proposed update lines, which he approves in the Inbox (see the intake skill).
 - Use Toronto time (`TZ=America/Toronto date`), 24-hour clock, Canadian spelling, vessel names in ALL CAPS.
 - Never fabricate. If something can't be read or settled, say so in the report.
 
