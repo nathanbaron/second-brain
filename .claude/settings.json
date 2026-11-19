@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__TwinMind__search",
+      "mcp__TwinMind__summary_search",
+      "mcp__TwinMind__todo_search",
+      "mcp__TwinMind__fetch",
+      "mcp__Notion__notion-search",
+      "mcp__Notion__notion-fetch",
+      "mcp__Notion__notion-query-data-sources",
+      "mcp__Notion__notion-create-pages",
+      "mcp__Notion__notion-update-page",
+      "Bash(python3 -I .claude/skills/intake/chunk.py:*)",
+      "Bash(jq:*)",
+      "Bash(TZ=America/Toronto date:*)"
+    ]
+  }
+}
