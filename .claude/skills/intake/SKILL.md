@@ -27,6 +27,7 @@ Both use the same steps and the same log, so neither one duplicates the other.
 | People (work roster) | `collection://c9dfeada-c344-4e10-b006-54b61a777e5a` |
 | Vessels and docks | `collection://1a1e3b69-de6d-8089-930b-000b44228d5e` |
 | Speaker directory | `collection://9c5f3e0f-7d5b-4d90-ba38-3a493b3f50c1` |
+| Context pages (five, one per facet) | see *Context pages* below |
 
 Areas and facets:
 - **Work:** Engineering Services (engineering, vessels, maintenance, scopes), Marine Management (people, organisation, operations).
@@ -60,7 +61,8 @@ Every note carries a **Source ID** (a hidden text property): `<meeting_id> <HH:M
 9. **Write the notes** to the standard: title, 📝 icon, `AI summary`, `Source ID`, Areas, People, Vessel / Dock, Related notes; the body as the standard sets out.
 10. **Write the tasks**, with the properties filled, not just the body. See *Task properties* below. Status **To Process**, always. Body to the standard: **Background**, **Suggested handling**.
 11. **Propose Activity Log entries** from the work conversations. See *Activity Log proposals* below.
-12. **Report.** See below. Then stop. Don't triage for him.
+12. **Update the Context pages** for the facets tonight's notes touched. See *Context pages* below.
+13. **Report.** See below. Then stop. Don't triage for him.
 
 ## Task properties
 
@@ -121,6 +123,31 @@ The MES Activity Log is Nathan's operational record of the fleet and docks. It f
 
 **Never** set `Period ` on a proposed entry, untick `Proposed` or `Update to review`, delete an entry, or edit an approved entry's properties. Those are his.
 
+## Context pages
+
+Five short pages on the Second Brain dashboard, one per facet, each a current picture of that part of his life. Sessions read them first, so they must be true and short. His word, 20 Nov: automate all five; the summaries sometimes catch things he doesn't.
+
+| Facet | Page |
+|---|---|
+| Work | `41de3b69-de6d-817e-a6ad-c4e348625aa2` |
+| Home and family | `41de3b69-de6d-81c2-9271-f3bbee97625a` |
+| Recovery and practice | `41de3b69-de6d-8159-9aa4-d3ba273d5b25` |
+| The water | `41de3b69-de6d-81a9-b9c7-c696dc4ed4f3` |
+| Self | `41de3b69-de6d-81dd-b3a6-d5331bcfdff7` |
+
+**When.** After the notes and tasks are written. Only for a facet that tonight's notes or tasks touched, and only when they change the picture: something started, finished, was decided, changed hands, or gained or lost a date. A night that changes nothing writes nothing. Most nights touch one or two pages.
+
+**How.** Fetch the page. Edit the lines under its headings with targeted replacements (`update_content`); never replace the whole page. Leave the callout at the top, the headings and anything he has written himself alone.
+- **Live now:** what is in motion, one line each. Add what started; rewrite a line whose state changed; remove a line only when the record shows it finished or was dropped.
+- **Decided:** decisions the notes record as made, each with its date. Add only; never remove.
+- **Who is carrying what** (Work only): person, then what they hold.
+- **Coming up:** anything with a date in the next three weeks, in date order. Drop dates that have passed.
+- End each line you add or change with the date in brackets, `(20 Nov)`, so a stale line shows itself.
+
+**Limits.** One page or less: about 200 words. When a page is full, cut the oldest settled line before adding. Only what the notes and tasks say; nothing inferred, nothing from memory. Everything in `standards/writing-notes.md` and *What never goes in* applies here in full: nothing said in confidence, nothing about other people's private lives, and from AA meetings and Centre classes only what Nathan himself committed to. The Work page is ministry work product and may be read under FOI. No source, no method, no speaker numbers.
+
+**If unsure** whether a line belongs, leave the page alone and name it in the report.
+
 ## Small and linked
 
 His word, 16 Nov: the smaller the task, the more useful it is, and the value is in the web of links: task to note, task to task, task to vessel and person, note to note.
@@ -140,14 +167,15 @@ Capture generously, because he reviews everything: his own commitments, things p
 - From AA meetings and Centre classes: only what Nathan himself committed to.
 - His feelings about how something landed on him. Those are for conversation, not notes.
 - The calendar. Not this skill's to write; if something looks like calendar material, say so in the task body and the report.
+- Any page outside Notes, Tasks and the Activity Log, except the five Context pages as *Context pages* allows.
 - The MES Activity Log beyond what *Activity Log proposals* allows: proposed entries, proposed update lines, and the step 0 promotion. Nothing else.
 
 ## The report
 
 This is the one place to speak plainly about method and confidence.
 
-- **On demand:** in chat. How many notes and tasks, with links. Activity Log: entries proposed, updates proposed, entries promoted after approval, and any recurring faults. From the cross-check: how many commitments were already captured (and updated rather than duplicated), the *Looks done* list, *Already done*, *Raised again*, and any *Recurring*. Anything time-sensitive. Anything kept out and why. Anything uncertain enough that he should check it.
-- **Nightly:** the run's final message, in the same order, ending with one line: `Intake <date>: <n> notes, <n> new tasks, <n> updated, <n> looks done, <n> log proposed, <n> log updates, <n> log promoted, <n> kept out, <failures or none>.`
+- **On demand:** in chat. How many notes and tasks, with links. Activity Log: entries proposed, updates proposed, entries promoted after approval, and any recurring faults. Context pages updated, by name, with the lines changed. From the cross-check: how many commitments were already captured (and updated rather than duplicated), the *Looks done* list, *Already done*, *Raised again*, and any *Recurring*. Anything time-sensitive. Anything kept out and why. Anything uncertain enough that he should check it.
+- **Nightly:** the run's final message, in the same order, ending with one line: `Intake <date>: <n> notes, <n> new tasks, <n> updated, <n> looks done, <n> log proposed, <n> log updates, <n> log promoted, <n> context pages, <n> kept out, <failures or none>.`
 
 ## The count, for the briefing
 
